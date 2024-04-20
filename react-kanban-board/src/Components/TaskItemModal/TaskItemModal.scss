@@ -1,0 +1,165 @@
+@import "../../styles/variables.scss";
+
+.task-item-wrapper {
+  padding: 0 15px;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 480px;
+  width: 100%;
+  .task-item-modal {
+    color: $white;
+    border-radius: 10px;
+    padding: 20px;
+    height: auto;
+    background-color: $dark-grey;
+    word-break: break-all;
+    label,
+    input {
+      background-color: $dark-grey;
+      font-family: inherit !important;
+    }
+
+    input,
+    .status-option,
+    .status {
+      background-color: transparent;
+      border: 0px solid;
+      color: $white;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid $grey;
+    }
+
+    label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    input:focus,
+    select:focus {
+      outline: none;
+    }
+
+    .task-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      word-break: break-word;
+      .task-item-title {
+        padding-right: 20px;
+         word-break: break-word;
+      }
+      .menu-btn {
+        padding: 3px 15px;
+        cursor: pointer;
+        background-color: $dark-grey;
+      }
+      .menu-div {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        border-radius: 10px;
+        background-color: $very-dark-grey;
+        padding: 20px;
+        width: 192px;
+        button {
+          background-color: $very-dark-grey;
+          display: block;
+          font-weight: 400;
+        }
+
+        .edit-board-btn {
+          color: $light-grey;
+          margin-bottom: 20px;
+        }
+        .delete-board-btn {
+          color: $red;
+        }
+      }
+    }
+
+    .task-text {
+      margin: 10px 0;
+      color: $light-grey;
+      font-size: 13px;
+      line-height: 25px;
+      max-height: 100px;
+      overflow-y: auto;
+      word-break: break-word;
+    }
+
+    .task-subtask-div {
+      .subtask-counter {
+        margin-bottom: 15px;
+      }
+      .subtask-list {
+        list-style-type: none;
+        overflow-y: auto;
+        max-height: 153px;
+        word-break: break-all;
+        .subtask-item {
+          border-radius: 5px;
+          background-color: $very-dark-grey;
+          font-size: 13px;
+          padding: 12px;
+          align-items: center;
+          display: flex;
+          margin-bottom: 12px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          .subtask-text {
+            margin-left: 10px;
+            display: inline-block;
+            word-break: break-word;
+          }
+
+          .checked-text {
+            text-decoration: line-through;
+            color: $light-grey;
+          }
+        }
+        .subtask-item:hover {
+          background-color: $dark-blue;
+        }
+      }
+    }
+
+    .current-status-div {
+      margin-top: 10px;
+      position: relative;
+      .status {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+        font-weight: 400;
+      }
+
+      .status-list {
+        background-color: $very-dark-grey;
+        position: absolute;
+        border-radius: 5px;
+        width: 100%;
+        max-height: 116px;
+        overflow-y: auto;
+        li {
+          padding: 10px;
+          list-style: none;
+          cursor: pointer;
+          color: $light-grey;
+        }
+        li:hover {
+          background-color: $grey;
+          color: $dark-blue;
+        }
+      }
+    }
+  }
+}

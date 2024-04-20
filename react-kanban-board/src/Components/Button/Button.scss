@@ -1,0 +1,39 @@
+@import "../../styles//variables.scss";
+
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.add-task {
+  width: 164px;
+  height: 48px;
+  background-color: $dark-blue;
+  border-radius: 24px;
+  color: $white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.add-task:hover {
+  background-color: $light-blue;
+}
+
+.add-column-subtask {
+  width: 100%;
+  font-size: 14px;
+  color: $dark-blue;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.create-save-changes{
+  width: 100%;
+  font-size: 14px;
+  color: $white;
+  background-color: $dark-blue;
+  padding: 10px;
+  border-radius: 20px;
+}

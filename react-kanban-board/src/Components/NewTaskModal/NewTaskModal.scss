@@ -1,0 +1,259 @@
+@import "../../styles/variables.scss";
+.deadline-div,
+.label-div,
+.color-div,
+.image-div,
+.comments-div,
+.resources-div,
+.members-div {
+  margin-top: 20px;
+}
+.color-div {
+  margin-top: 20px;
+}
+
+.color-options {
+  display: flex;
+  margin-top: 8px;
+}
+
+.container {
+  display: flex;
+justify-content: space-around;
+
+  .col1 {
+    padding: 20px 10px;
+    width: 50%;
+  }
+  .col2 {
+    padding-left: 20px;
+  }
+
+}
+.color-option {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.selected-color {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.selected-color label {
+  margin-right: 8px;
+  color: #828FA3;
+}
+.image-upload-div {
+  margin-top: 20px;
+}
+
+.image-upload-div label {
+  margin-bottom: 8px;
+  color: #828FA3;
+}
+
+.uploaded-image {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.uploaded-image label {
+  margin-right: 8px;
+  color: #828FA3;
+}
+
+.uploaded-image img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.uploaded-image button {
+  margin-left: 8px;
+  padding: 4px 8px;
+  background-color: #EA5555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deadline,
+.label,
+.color,
+.image,
+.comments,
+.resources,
+.members {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+.file-link {
+  margin-bottom: 5px;
+  color: #0366d6; /* Link color */
+  text-decoration: none;
+}
+
+.file-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.new-task-wrapper {
+  padding: 0 15px;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70%;
+  width: 100%;
+  
+
+  .new-task-modal {
+    color: $white;
+    border-radius: 10px;
+    padding: 20px;
+    height: auto;
+    background-color: 
+    $dark-grey;height: 600px;
+  max-height: 600px;
+  overflow-y: auto;
+
+
+    label,
+    input,
+    textarea {
+      background-color: $dark-grey;
+      display: block !important;
+      font-family: inherit !important;
+    }
+
+    input,
+    textarea,
+    .status {
+      background-color: transparent;
+      border: 0px solid;
+      color: $white;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid $grey;
+    }
+
+    label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    .error-border {
+      border: 1px solid $red;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+    }
+
+    .new-task-title,
+    .task-title-div,
+    .description-div,
+    .subtasks-div,
+    .status-div {
+      margin-bottom: 10px;
+    }
+
+    .task-title-div {
+      .title {
+        width: 100%;
+      }
+      .title-error {
+        font-size: 14px;
+        color: $red;
+        padding-left: 10px;
+        position: absolute;
+        right: 50px;
+        top: 83px;
+      }
+    }
+    .description-div {
+      .description {
+        width: 100%;
+      }
+    }
+
+    .subtasks-div {
+      .subtask-list{
+        max-height: 116px;
+        overflow-y: auto;
+        .subtasks-item-div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        position: relative;
+        .subtasks-input {
+          flex-grow: 1;
+          margin-right: 12px;
+        }
+        svg {
+          cursor: pointer;
+        }
+
+        svg g:hover {
+          fill: $red;
+        }
+        .subtask-error {
+          font-size: 14px;
+          color: $red;
+          position: absolute;
+          right: 40px;
+        }
+      }
+      }
+
+    }
+    .status-div {
+      position: relative;
+      .status {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        cursor: pointer;
+        font-weight: 400;
+      }
+      .status-list {
+        background-color: $very-dark-grey;
+        position: absolute;
+        border-radius: 5px;
+        width: 100%;
+        max-height: 116px;
+        overflow-y: auto;
+        li {
+          padding: 10px;
+          list-style: none;
+          cursor: pointer;
+          color: $light-grey;
+        }
+        li:hover {
+          background-color: $grey;
+          color: $dark-blue;
+        }
+      }
+    }
+  }
+}

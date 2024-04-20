@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.board-column {
+    max-width: 280px;
+    min-width: 280px;
+    margin-right: 20px;
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    // background-color: $dark-grey;
+  h3 {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    color: $light-grey;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    
+    .board-color {
+      width: 12px;
+      height: 12px;
+      margin-right: 10px;
+      display: inline-block;
+      border-radius: 100%;
+    }
+  }
+  .task-list {
+    height: inherit;
+    max-height: 97%;
+    overflow-y: auto;
+    width: 95%;
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../styles/variables.scss";
+
+.delete-task-wrapper {
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 480px;
+  padding: 0 15px;
+  .delete-task-modal {
+    border-radius: 10px;
+    padding: 20px;
+    height: auto;
+    background-color: $dark-grey;
+
+    .delete-task-title {
+      color: $red;
+    }
+
+    .delete-text {
+      font-size: 13px;
+      color: $light-grey;
+      line-height: 25px;
+      margin: 20px 0;
+    }
+
+    .delete-btn-div {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        max-width: 200px;
+        width: 100%;
+        height: 40px;
+        border-radius: 20px;
+      }
+
+      .delete-task-btn {
+        background-color: $red;
+        color: $white;
+        transition: all 0.3s ease;
+        @media (max-width: 768px) {
+          margin-right: 5px;
+        }
+      }
+      .delete-task-btn:hover {
+        background-color: $hover-red;
+      }
+      .cancel-btn {
+        color: $dark-blue;
+        transition: all 0.3s ease;
+        @media (max-width: 768px) {
+          margin-left: 5px;
+        }
+      }
+      .cancel-btn:hover {
+        background-color: $light-blue;
+        color: $white;
+      }
+    }
+  }
+}

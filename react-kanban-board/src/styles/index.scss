@@ -1,0 +1,146 @@
+@import "./variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $dark-blue;
+  border-radius: 10px;
+}
+
+.App {
+  .modal-overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #00000075;
+    position: fixed;
+    padding: 20px;
+  }
+  main {
+    display: flex;
+    height: calc(100vh - 80px);
+  }
+}
+
+.light-mode {
+  label,
+  .mobile-board-menu {
+    color: black !important;
+    background-color: $white !important;
+  }
+
+  input,
+  select,
+  textarea,
+  .edit-status,
+  .status {
+    border: 1px solid $light-grey !important;
+    color: black !important;
+  }
+
+  h3 {
+    color: black;
+  }
+
+  .error-border {
+    border: 1px solid $red !important;
+  }
+
+  .board-body {
+    background-color: $shade-white;
+
+    .board-item {
+      background-color: $white;
+      color: black;
+    }
+
+    .new-board-column {
+      background-color: $very-light-grey;
+    }
+  }
+
+  .sidebar,
+  .create-board-btn,
+  .delete-board-modal,
+  .new-task-modal,
+  .edit-board-modal,
+  .edit-task-modal,
+  .edit-status-list,
+  .task-item-modal,
+  .menu-btn,
+  .status-list,
+  .new-board-modal,
+  .new-column-modal,
+  .delete-task-modal,
+  .menu-div,
+  .edit-board-btn,
+  .delete-board-btn {
+    background-color: $white !important;
+  }
+
+  .status-option:hover,
+  .status-item:hover,
+  .create-board-btn:hover {
+    background-color: $light-blue !important;
+  }
+
+  .subtask-item {
+    background-color: $shade-white !important;
+  }
+
+  .subtask-item:hover {
+    background-color: $light-blue !important;
+  }
+
+  .navbar,
+  .sidebar-board-btn {
+    background-color: $white;
+  }
+
+  .navbar {
+    border: 1px solid $very-light-grey;
+    .logo-div {
+      border-right: 1px solid $very-light-grey;
+    }
+  }
+
+  .board-name {
+    color: black;
+  }
+
+  .board-item:hover{
+    color: $dark-blue;
+  }
+
+  .sidebar-board-btn:hover {
+    background-color: $very-light-grey;
+  }
+
+  .active-board {
+    background-color: $dark-blue;
+  }
+
+  .color-theme-div {
+    background-color: $shade-white !important;
+  }
+}

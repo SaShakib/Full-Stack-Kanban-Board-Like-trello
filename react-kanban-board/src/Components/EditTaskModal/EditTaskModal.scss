@@ -1,0 +1,356 @@
+@import "../../styles/variables.scss";
+.edit-deadline-div {
+  margin-top: 15px;
+
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+.container {
+  display: flex;
+justify-content: space-around;
+
+  .col1 {
+    padding: 20px 10px;
+    width: 50%;
+  }
+  .col2 {
+    padding-left: 20px;
+  }
+
+}
+.edit-label-div,
+.edit-deadline-div,
+.edit-color-div,
+.edit-image-div,
+.edit-comments-div,
+.edit-resources-div,
+.edit-members-div {
+  margin-top: 20px;
+}
+.edit-color-div {
+  margin-top: 20px;
+}
+
+.edit-color-options {
+  display: flex;
+  margin-top: 8px;
+}
+
+.edit-color-option {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.edit-selected-color {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.edit-selected-color label {
+  margin-right: 8px;
+  color: #828FA3;
+}
+.edit-image-upload-div {
+  margin-top: 20px;
+}
+
+.edit-image-upload-div label {
+  margin-bottom: 8px;
+  color: #828FA3;
+}
+
+.edit-uploaded-image {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.edit-uploaded-image label {
+  margin-right: 8px;
+  color: #828FA3;
+}
+
+.edit-uploaded-image img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.edit-uploaded-image button {
+  margin-left: 8px;
+  padding: 4px 8px;
+  background-color: #EA5555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-deadline,
+.edit-label,
+.edit-color,
+.edit-image,
+.edit-comments,
+.edit-resources
+ {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+.comments-section {
+  margin-top: 20px;
+}
+
+.comments-heading {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.comment-item {
+  padding: 4px 0px;
+  margin-bottom: 4px;
+}
+
+.comment-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.comment-content {
+  color: #ddd;
+    margin-top: 10px;
+    padding: 8px;
+    padding-left: 12px;
+    /* border: 1px solid; */
+    background: #3e3f4e;
+    border-radius: 8px;
+}
+.resources-div {
+  margin-bottom: 20px;
+}
+.Uploaded {
+  margin: 20px 4px;
+}
+.edit-members-div {
+  /* Your existing styles for the member list div *
+  /* Add button styles */
+  button {
+    background-color: #4caf50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add a slight border radius */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    margin-top: 10px; /* Adjust top margin for spacing */
+    font-size: 14px; /* Set font size */
+  }
+
+  button:hover {
+    background-color: #45a049; /* Darker green color on hover */
+  }
+}
+.send-button {
+  /* Add your desired styles here */
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Add more styles as needed */
+}
+.edit-task-wrapper {
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 60%;
+  padding: 0 15px;
+  .edit-task-modal {
+    color: $white;
+    border-radius: 10px;
+    padding: 20px;
+    height: auto;
+    height: 600px;max-height: 600px;
+    overflow-y: auto;
+    background-color: $dark-grey;
+
+    label,
+    input,
+    textarea {
+      background-color: $dark-grey;
+      display: block !important;
+      font-family: inherit !important;
+    }
+
+.members-list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.members-list h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.members-list ul {
+  list-style-type:disclosure-closed;
+  padding-left:20px;
+}
+
+.members-list li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+
+    input,
+    textarea,
+    .edit-status {
+      background-color: transparent;
+      border: 0px solid;
+      color: $white;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid $grey;
+    }
+
+    label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    .error-border {
+      border: 1px solid $red;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+    }
+
+    .edit-task-title,
+    .edit-task-title-div,
+    .edit-description-div,
+    .edit-subtasks-div,
+    .edit-status-div {
+      margin-bottom: 10px;
+    }
+
+    .edit-task-title-div {
+      .edit-task-title {
+        width: 100%;
+      }
+
+      .title-error {
+        font-size: 14px;
+        color: $red;
+        padding-left: 10px;
+        position: absolute;
+        right: 50px;
+        top: 83px;
+      }
+    }
+    .edit-description-div {
+      .edit-description {
+        width: 100%;
+        height: 100px;
+      }
+    }
+
+    .edit-subtasks-div {
+   
+      .edit-subtasks-list {
+        max-height: 116px;
+        overflow-y: auto;
+        position: relative;
+        .edit-subtasks-item-div {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          .edit-subtasks-input {
+            flex-grow: 1;
+            margin-right: 12px;
+          }
+          svg {
+            cursor: pointer;
+          }
+
+          svg g:hover {
+            fill: $red;
+          }
+          .subtask-error {
+            font-size: 14px;
+            color: $red;
+            position: absolute;
+            right: 40px;
+          }
+        }
+      }
+    }
+    .edit-status-div {
+      position: relative;
+      .edit-status {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        cursor: pointer;
+        font-weight: 400;
+        padding: 10px;
+      }
+
+      .edit-status-list {
+        background-color: $very-dark-grey;
+        position: absolute;
+        border-radius: 5px;
+        width: 100%;
+        max-height: 116px;
+        overflow-y: auto;
+        li {
+          padding: 10px;
+          list-style: none;
+          cursor: pointer;
+          color: $light-grey;
+        }
+        li:hover {
+          background-color: $grey;
+          color: $dark-blue;
+        }
+      }
+    }
+  }
+}

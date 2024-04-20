@@ -1,0 +1,62 @@
+@import "../../styles/variables.scss";
+
+.board-item{
+  list-style: none;
+  font-size: 13px;
+  border-radius: 10px;
+  padding: 16px 12px 6px 12px;
+  margin-bottom: 10px;
+  background-color: $dark-grey;
+  color: $white;
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(54,78,126,.102);
+  word-break: break-all; 
+  display: block;
+  cursor: pointer;
+  .item-title{
+    margin-bottom: 20px;
+    font-size: 20px;
+    margin-left: 8px;
+    margin-top: 10px;
+    margin-right: 60px;
+  }
+
+  .subtask-count{
+    color: $light-grey;
+    font-weight: 700;
+  }
+}
+
+.board-item:hover{
+ 
+ .item-title {
+   color: $dark-blue;
+   
+ }
+}
+
+.Label {
+    font-size: 12px;
+    margin-bottom: 16px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 16px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.Icons {
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  .icon {
+    width: 20px;
+    margin-left: 4px;
+    margin-right: 8px;
+    height: 20px;
+  }
+}

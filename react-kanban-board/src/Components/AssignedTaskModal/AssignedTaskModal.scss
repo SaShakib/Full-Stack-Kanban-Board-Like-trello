@@ -1,0 +1,112 @@
+// AssignedModal.scss
+$white: #ffffff;
+$dark-grey: #2f3136;
+$grey: #8e9297;
+$red: #ff4f4f;
+@import "../../styles/variables.scss";
+
+.assigned-modal-wrapper {
+  padding: 0 15px;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 480px;
+  width: 100%;
+}
+
+.assigned-modal {
+  color: $white;
+  border-radius: 10px;
+  padding: 20px;
+  height: auto;
+  background-color: $dark-grey;
+  max-height: 600px; overflow-y: auto;
+
+  h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: $white;
+  }
+
+  .assigned-tasks-list {
+    .assigned-task {
+      border-bottom: 1px solid $grey;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+h4 {
+    color: $dark-blue
+}
+      .task-name {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .task-info {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        color: $grey;
+      }
+
+      .subtasks {
+        margin-bottom: 5px;
+
+        .subtask-label {
+          font-weight: bold;
+          margin-bottom: 5px;
+          margin-top: 20px;
+          color: $dark-blue;
+        }
+
+        .subtask-list {
+          list-style-type: none;
+          padding: 0;
+          margin-bottom:10px;
+
+          .subtask {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: $very-light-grey;        
+            padding: 8px 0px 8px 8px ;
+            // color: $light-grey;
+          }
+        }
+      }
+
+      .deadline {
+        margin-bottom: 10px;
+
+        .deadline-label {
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+
+        .deadline-info {
+          font-size: 1rem;
+          color: $light-grey;
+        }
+      }
+
+      .label {
+        margin-top: 10px;
+
+        .label-label {
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+
+        .label-color {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .close-button {
+    margin-top: 20px;
+  }
+}
