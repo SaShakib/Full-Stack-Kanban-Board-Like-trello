@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const validator = require("validator"); // Add a validator library
 
 // Use environment variables for sensitive information
-const secretKey = process.env.JWT_SECRET || "shakib";
+const secretKey = process.env.JWT_SECRET || "secretkey";
 
 // Sign Up
 router.post("/signup", async (req, res) => {
