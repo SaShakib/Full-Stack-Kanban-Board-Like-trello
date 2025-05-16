@@ -10,7 +10,10 @@ const path = require("path");
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost:27017/Kanban", {});
+mongoose.connect(
+  "mongodb+srv://tasmimdead:mangotas@cluster0.ead5r.mongodb.net/Kanban?retryWrites=true&w=majority&appName=Cluster0",
+  {}
+);
 
 mongoose.connection.on("connected", () => {
   console.log("Connected to MongoDB");

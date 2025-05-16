@@ -22,7 +22,9 @@ const TaskItem = ({
 }) => {
   const dispatch = useDispatch();
   const { user } = useSelector((store) => store.user);
-  const hasMail = member.some((mem) => mem.email === user.email);
+
+  // if member is empty it will throw error what will i do to not make this happen
+  const hasMail = member ? member.some((mem) => mem.email === user.email) : false;
 
   return (
     <Draggable key={taskID} draggableId={taskID} index={index}>
